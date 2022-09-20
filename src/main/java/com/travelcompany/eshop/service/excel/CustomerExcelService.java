@@ -25,7 +25,6 @@ public class CustomerExcelService implements AbstractExcelService<Customer> {
     public List<Customer> readFromFile(String filePath) {
         try(FileInputStream fileInputStream = new FileInputStream(filePath);
             XSSFWorkbook workbook = new XSSFWorkbook(fileInputStream)){
-            logger.info("Writing multiple customers to Excel");
 
             final XSSFSheet sheet = workbook.getSheetAt(0);
 

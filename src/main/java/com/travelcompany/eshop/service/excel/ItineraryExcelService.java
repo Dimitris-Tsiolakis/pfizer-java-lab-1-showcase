@@ -25,7 +25,7 @@ public class ItineraryExcelService implements AbstractExcelService<Itinerary> {
     public boolean storeToFile(List<Itinerary> itineraries, String filePath) {
         try (XSSFWorkbook workbook = new XSSFWorkbook();
              FileOutputStream outputStream = new FileOutputStream(filePath)) {
-            logger.info("Writing multiple itineraries to Excel");
+
             XSSFSheet sheet = workbook.createSheet("Itineraries");
 
             int rowIndex = 0;

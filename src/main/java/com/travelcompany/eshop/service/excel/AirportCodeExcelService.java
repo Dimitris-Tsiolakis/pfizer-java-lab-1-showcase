@@ -25,7 +25,7 @@ public class AirportCodeExcelService implements AbstractExcelService<AirportCode
     public boolean storeToFile(List<AirportCode> airportCodes, String filePath) {
         try (XSSFWorkbook workbook = new XSSFWorkbook();
              FileOutputStream outputStream = new FileOutputStream(filePath)) {
-            logger.info("Writing multiple airport codes to Excel");
+
             XSSFSheet sheet = workbook.createSheet("Airport Codes");
 
             int rowIndex = 0;
