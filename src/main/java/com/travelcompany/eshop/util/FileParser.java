@@ -9,7 +9,7 @@ import java.util.List;
 
 public class FileParser {
 
-    public static List<String> parse(String filepath) {
+    public static List<String> load(String filepath) {
         ArrayList<String> stringList = new ArrayList<>();
         try (BufferedReader bufferedReader = Files.newBufferedReader(Path.of(filepath))) {
             String line;

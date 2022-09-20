@@ -3,6 +3,6 @@ package com.travelcompany.eshop.service;
 import java.util.List;
 
 public interface AbstractExcelService<T> {
-    List<T> readFile(String filePath);
+    List<T> readFromFile(String filePath);
     boolean storeToFile();
 }

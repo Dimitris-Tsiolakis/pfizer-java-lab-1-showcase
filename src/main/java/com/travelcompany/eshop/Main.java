@@ -18,19 +18,19 @@ public class Main {
 
     public static void main(String[] args) {
         logger.info("Loading customers from CSV");
-        List<String> customersAsLines = FileParser.parse("customers.csv");
+        List<String> customersAsLines = FileParser.load("csvFiles/customers.csv");
         CustomerFactory customerFactory = new CustomerFactory();
         List<Customer> customersFromFactory = customerFactory.parseList(customersAsLines);
         customersFromFactory.forEach(customer -> logger.info("{}", customer));
 
         logger.info("Loading itineraries from CSV");
-        List<String> itinerariesAsLines = FileParser.parse("itineraries.csv");
+        List<String> itinerariesAsLines = FileParser.load("csvFiles/itineraries.csv");
         ItineraryFactory itineraryFactory = new ItineraryFactory();
         List<Itinerary> itinerariesFromFactory = itineraryFactory.parseList(itinerariesAsLines);
         itinerariesFromFactory.forEach(itinerary -> logger.info("{}", itinerary));
 
         logger.info("Loading airport codes from CSV");
-        List<String> airportCodesAsLines = FileParser.parse("airport_codes.csv");
+        List<String> airportCodesAsLines = FileParser.load("csvFiles/airport_codes.csv");
         AirportCodeFactory airportCodeFactory = new AirportCodeFactory();
         List<AirportCode> airportCodesFromFactory = airportCodeFactory.parseList(airportCodesAsLines);
         airportCodesFromFactory.forEach(airportCode -> logger.info("{}", airportCode));

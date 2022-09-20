@@ -12,13 +12,14 @@ import java.util.List;
 
 public class CustomerExcelService implements AbstractExcelService<Customer>{
     @Override
-    public List<Customer> readFile(String filePath) {
+    public List<Customer> readFromFile(String filePath) {
         try(FileInputStream fileInputStream = new FileInputStream(filePath);
             XSSFWorkbook workbook = new XSSFWorkbook(fileInputStream)){
             final XSSFSheet sheet = workbook.getSheetAt(0);
 
             final XSSFRow row = sheet.getRow(0);
             final String stringCellValue = row.getCell(0).getStringCellValue();
+            // todo, actually read from an excel file
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException ioException) {

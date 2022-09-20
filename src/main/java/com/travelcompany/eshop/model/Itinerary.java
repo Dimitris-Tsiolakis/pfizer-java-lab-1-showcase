@@ -17,4 +17,15 @@ public class Itinerary extends BaseEntity {
         this.airline = airline;
         this.basePrice = basePrice;
     }
+
+    @Override
+    public String toString() {
+        return "Itinerary{" +
+                "departureCode=" + departureCode +
+                ", destinationCode=" + destinationCode +
+                ", departureDate='" + departureDate + '\'' +
+                ", airline='" + airline + '\'' +
+                ", basePrice=" + basePrice +
+                "} " + super.toString();
+    }
 }

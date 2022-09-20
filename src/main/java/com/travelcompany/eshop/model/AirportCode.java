@@ -6,4 +6,11 @@ public class AirportCode extends BaseEntity {
     public AirportCode(String code) {
         this.code = code;
     }
+
+    @Override
+    public String toString() {
+        return "AirportCode{" +
+                "code='" + code + '\'' +
+                "} " + super.toString();
+    }
 }
