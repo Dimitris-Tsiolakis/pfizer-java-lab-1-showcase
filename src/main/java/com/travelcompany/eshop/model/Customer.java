@@ -56,4 +56,15 @@ public class Customer extends BaseEntity {
     public void setCategory(CustomerCategory category) {
         this.category = category;
     }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", address='" + address + '\'' +
+                ", nationality='" + nationality + '\'' +
+                ", category=" + category +
+                "} " + super.toString();
+    }
 }
