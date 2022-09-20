@@ -1,3 +1,6 @@
 /.idea/
 /logs/
 /target/
+/airportCodesExcel.xlsx
+/customersExcel.xlsx
+/itinerariesExcel.xlsx

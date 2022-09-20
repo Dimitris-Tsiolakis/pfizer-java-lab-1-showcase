@@ -28,4 +28,44 @@ public class Itinerary extends BaseEntity {
                 ", basePrice=" + basePrice +
                 "} " + super.toString();
     }
+
+    public AirportCode getDepartureCode() {
+        return departureCode;
+    }
+
+    public void setDepartureCode(AirportCode departureCode) {
+        this.departureCode = departureCode;
+    }
+
+    public AirportCode getDestinationCode() {
+        return destinationCode;
+    }
+
+    public void setDestinationCode(AirportCode destinationCode) {
+        this.destinationCode = destinationCode;
+    }
+
+    public String getDepartureDate() {
+        return departureDate;
+    }
+
+    public void setDepartureDate(String departureDate) {
+        this.departureDate = departureDate;
+    }
+
+    public String getAirline() {
+        return airline;
+    }
+
+    public void setAirline(String airline) {
+        this.airline = airline;
+    }
+
+    public BigDecimal getBasePrice() {
+        return basePrice;
+    }
+
+    public void setBasePrice(BigDecimal basePrice) {
+        this.basePrice = basePrice;
+    }
 }

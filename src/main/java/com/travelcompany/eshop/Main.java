@@ -6,6 +6,9 @@ import com.travelcompany.eshop.factory.ItineraryFactory;
 import com.travelcompany.eshop.model.AirportCode;
 import com.travelcompany.eshop.model.Customer;
 import com.travelcompany.eshop.model.Itinerary;
+import com.travelcompany.eshop.service.excel.AirportCodeExcelService;
+import com.travelcompany.eshop.service.excel.CustomerExcelService;
+import com.travelcompany.eshop.service.excel.ItineraryExcelService;
 import com.travelcompany.eshop.util.FileParser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,6 +37,15 @@ public class Main {
         AirportCodeFactory airportCodeFactory = new AirportCodeFactory();
         List<AirportCode> airportCodesFromFactory = airportCodeFactory.parseList(airportCodesAsLines);
         airportCodesFromFactory.forEach(airportCode -> logger.info("{}", airportCode));
+
+        CustomerExcelService customerExcelService = new CustomerExcelService();
+        customerExcelService.storeToFile(customersFromFactory, "customersExcel.xlsx");
+
+         ItineraryExcelService itineraryExcelService = new ItineraryExcelService();
+        itineraryExcelService.storeToFile(itinerariesFromFactory, "itinerariesExcel.xlsx");
+
+        AirportCodeExcelService airportCodeExcelService = new AirportCodeExcelService();
+        airportCodeExcelService.storeToFile(airportCodesFromFactory, "airportCodesExcel.xlsx");
 
     }
 }
